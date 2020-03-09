@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import MyNav from "@components/Nav.vue"
+import MyNav from "@/components/Nav.vue"
 export default {
   components: {
     MyNav
