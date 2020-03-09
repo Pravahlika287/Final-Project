@@ -4,7 +4,7 @@
         <h1 class="title">
           Home Page
         </h1>
-        <p> hi </p>
+        <p><i> Welcome</i></p>
     </div>
     
   </section>
