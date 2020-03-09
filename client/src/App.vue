@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-     <MyNav></MyNav>  
+     <MyNav>
+       
+     </MyNav>  
      <router-view/>
   </div>   
 
 </template>
 
 <script>
-import MyNav from "@components/Nav.vue";
+import MyNav from "@components/Nav.vue"
 export default {
   components: {
     MyNav
