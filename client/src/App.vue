@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-     <MyNav>
-       
-     </MyNav>  
-     <router-view/>
+    <MyNav>
+
+    </MyNav>
+
+
+
+ <router-view/>
   </div>   
 
 </template>
