@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Excercise  from '../views/Excercise.vue'
+import Heart from '../views/Heart.vue'
+import Nutrition from '../views/Nutrition.vue'
 
 
 
@@ -12,8 +14,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Excercise',
+    component: Excercise
   },
   {
     path: '/about',
