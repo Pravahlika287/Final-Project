@@ -15,85 +15,66 @@
 
   <div :class="{ 'is-active':isOpen }" class="navbar-menu">
     <div class="navbar-start">
+      
+
+
+      <router-link to="/" class="navbar-item" active-class="is-current" exact>Home</router-link>
+      
+      
+
+      
+
+      <router-link to="/Excercise" class="navbar-item" active-class="is-current">Excercise</router-link>
+      
+
+      
+      <router-link to="/Heart" class="navbar-item" active-class="is-current">Heart</router-link>
+      <router-link to="/Nutrition" class="navbar-item" active-class="is-current">Nutrition</router-link>
+      
       <div class="navbar-item has-dropdown is-hoverable">
-
-
-
-      <router-link to="/" class="navbar-link" active-class="is-current" exact>Excercise</router-link>
-      <div class="navbar-dropdown">
-        <a class="navbar-item">
-          Walking
-        </a>  
-        <hr class="navbar-divider">
-        <a class="navbar-item">
-          Running
-        </a>
-        <hr class="navbar-divider">
-        <a class="navbar-item">
-          Cycling
-        </a> 
-      </div>
-      </div> 
-
-      <div class="navbar-item has-dropdown is-hoverable">
-
-      <router-link to="/about" class="navbar-link" active-class="is-current">Heart</router-link>
-      <div class="navbar-dropdown">
-        <a class="navbar-item">
-          Blood Pressure
-        </a>  
-        <hr class="navbar-divider">
-        <a class="navbar-item">
-          Heart Rate
-        </a>
-        <hr class="navbar-divider">
-        <a class="navbar-item">
-          ECG
-        </a> 
-      </div>
-      </div> 
-
-      <div class="navbar-item has-dropdown is-hoverable">
-      <router-link to="/game" class="navbar-link" active-class="is-current">Nutrition</router-link>
-      <div class="navbar-dropdown">
-        <a class="navbar-item">
-            Carbohydrates
-          </a>
+         <a class="navbar-item" active-class="is-current">Track</a>
+         <div class="navbar-dropdown">
+          <router-link to="/Activity" class="navbar-item">
+            Activity</router-link>
+          
            <hr class="navbar-divider">
-          <a class="navbar-item">
-            Fibres
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Vitamins
-            </a>
+          <router-link to="/log" class="navbar-item">
+            Log</router-link>
+          
          
           
         </div>
       </div>
+          
+
+
+      
+         
+          
+    
 
 
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
+        <a class="navbar-item">
+          About</a>
+        
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
+          <router-link to="/contact" class="navbar-item">
+            Contact</router-link>
+          
            <hr class="navbar-divider">
-          <a class="navbar-item">
-            Contact
-          </a>
+          <router-link to="/report" class="navbar-item">
+            Report an issue</router-link>
+          
          
           
         </div>
       </div>
-    </div>
+  
 
-    <div class="navbar-end">
+   
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
@@ -105,7 +86,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 </nav>
 </template>
 
@@ -121,5 +102,11 @@ export default {
   .is-current {
     font-weight: bold;
     color: blueviolet
+  }
+  .navbar {
+    font: 1em sans-serif;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
   }
 </style>
