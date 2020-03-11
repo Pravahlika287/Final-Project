@@ -72,21 +72,22 @@
           
         </div>
       </div>
+    </div>  
   
 
-   
+    <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/login">
-            Log in
-          </a>
-        </div>
+        
+          <router-link to="/sign" class="navbar-item">
+            Sign up</router-link>
+        
+          <router-link to="/login" class="navbar-item">
+            Log in</router-link>
+          
+        
       </div>
     </div>
-  
+  </div>
 </nav>
 </template>
 

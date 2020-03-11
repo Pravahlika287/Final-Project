@@ -5,8 +5,13 @@ import Heart from '../views/Heart.vue'
 import Nutrition from '../views/Nutrition.vue'
 import contact from '../views/contact.vue'
 import report from '../views/report.vue'
+import Activity from '../views/Activity.vue'
+import Log from '../views/Log.vue'
+import login from '../views/login.vue'
+import sign from '../views/sign.vue'
 
 import Home from '../views/Home.vue'
+import { CurrentUser } from '../models/Users';
 
 
 
@@ -57,6 +62,20 @@ const routes = [
     component:Log
     
   },
+  {
+    path: '/login',
+    name: 'login',
+    component:login
+    
+  },
+  {
+    path: '/sign',
+    name: 'sign',
+    component:sign
+    
+  },
+  
+
   
 
   
@@ -74,6 +93,11 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
+router.beforeEach( (to, from, next) => {
+  if( to.meta.isSecret && !CurrentUser) next('/login');
+  else next();
+});
+
 
 export default router
