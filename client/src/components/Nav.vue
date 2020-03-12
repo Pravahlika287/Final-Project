@@ -1,9 +1,7 @@
 <template>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item">
-      <img src="C:\Users\admin\Desktop\Final-Project\fit.jpeg" width="112" height="28">
-    </a>
+   
     
 
     <a :class="{ 'is-active':isOpen }" @click="isOpen = !isOpen" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" >

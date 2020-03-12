@@ -1,21 +1,30 @@
 <template> 
-<section class="hero">
-  <div class="hero-body">
+<section class="hero has-background-primary">
+  
     <div class="container">
-      <h2 class="title"><b>
+      <div class="title">
+      <img src="https://image.freepik.com/free-vector/health-fitness-tracker-app-mobile-phone-screen-flat-cartoon_101884-617.jpg" width="250" height="190">
+     <h2 class="has-text-black has-text-weight-bold has-text-right">
           Walking 
         
-     </b></h2>
-      <h3 class="subtitle"><b>
+     </h2>
+     <hr>
+      <h3 class="subtitle has-text-black has-text-weight-bold has-text-right"><b>
         Walking may be the simplest way to work out. You can do it almost anywhere.
       </b></h3>
+       <h2 class="has-text-black has-text-weight-bold has-text-right">
+          Running 
+        
+     </h2>
+     <hr>
+      <h3 class="subtitle has-text-black has-text-weight-bold has-text-right"><b>
+       Running helps in refreshing the body and burning calories.
+      </b></h3>
       
-      <section class="content">
-          <p>There are many great reasons to walk. Your heart will get stronger, you’ll lower your blood pressure, and your bones will get stronger.
-           Walking also eases stress, helps you sleep better, and can boost your outlook on life.</p>
-      </section>
+      
     </div>
   </div>
+  
 </section>
       
 

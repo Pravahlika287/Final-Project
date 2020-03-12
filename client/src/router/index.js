@@ -54,7 +54,8 @@ const routes = [
   {
     path: '/Activity',
     name: 'Activity',
-    component:Activity
+    component:Activity,
+    meta: {isSecret:true}
   },
   {
     path: '/Log',
