@@ -1,5 +1,5 @@
 <template>
-    <section class="hero-body has-background-primary">
+    <section class="hero has-background-grey hero is-link is-fullheight-with-navbar">
         <div class="container has-text-bold is-medium has-text-centered">
             <ul><b><u>CONTACT</u></b></ul>
             <br>

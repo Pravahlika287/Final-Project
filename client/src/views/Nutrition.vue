@@ -2,7 +2,7 @@
 
 
 
-<section class="hero has-background-primary">
+<section class="hero has-background-grey hero is-success is-fullheight">
   <div class="hero-body">
     <div class="container">
       <div class="title">
