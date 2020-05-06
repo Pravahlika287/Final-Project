@@ -21,8 +21,8 @@ function add25(){
 
 module.exports = {
     HydrateSum,
-    add1,
-    add10,
-    add5,
-    add20
+    add3,
+    add6,
+    add15,
+    add25
 }

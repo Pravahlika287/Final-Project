@@ -13,11 +13,11 @@ export default {
      })
     },
     async addEx(newex) {
-        await myFetch("/excercise/addEx")
+        await myFetch("/excercise/addEx",{newex})
 },
     
 async remove(i) {
-    await myFetch("/excercise/remove")         
+    await myFetch("/excercise/remove",{i})         
 },
 
 }

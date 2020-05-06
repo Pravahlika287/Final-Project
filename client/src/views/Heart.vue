@@ -48,7 +48,7 @@
 
 </template>
 <script>
-import Heart from '..Models/Heart'
+import Heart from '../models/Heart'
 export default {
   data: () => ({
         BP: Heart.State.Heart[0].BPtotal //index of where you're looking

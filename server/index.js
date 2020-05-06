@@ -2,9 +2,13 @@ const express = require('express');
 const path = require('path');
 
 const Excontroller= require('./controllers/excercise');
+
+const loginController = require('./controllers/login');
+
 const hycontroller=require('./controllers/hydrate');
 const hecontroller = require('./controllers/heart');
 const ncontroller = require('./controllers/nutrition');
+const usersController = require('./controllers/users');
 
 const app = express();
 const port = 3000;
@@ -26,13 +30,15 @@ app.use(function(req, res, next) {
 app
 .use(express.json())
 .use(express.urlencoded({ extended: true }))
-.use(express.static( __dirname + '/../client/dist'))
-    .get('/', (req, res) => res.send('Stay fit everyone') )
 
+    .get('/', (req, res) => res.send('Stay fit everyone') )
+    
     .use('/excercise',Excontroller) 
     .use('/hydrate', hycontroller)
     .use('/heart',hecontroller)
     .use('/nutrition',ncontroller)
+    .use('/users', usersController)
+    .use('/login', loginController)
 
     .use((req, res) => {
         const homePath = path.join( __dirname , '/../client/dist/index.html');

@@ -1,14 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Excercise  from '../views/Excercise.vue'
-import Heart from '../views/Heart.vue'
-import Nutrition from '../views/Nutrition.vue'
-import contact from '../views/contact.vue'
-import Hydrate from '../views/Hydrate.vue'
 
 
-import login from '../views/login.vue'
-import sign from '../views/sign.vue'
 
 import Home from '../views/Home.vue'
 import { CurrentUser } from '../models/Users';
@@ -30,40 +23,39 @@ const routes = [
   {
     path: '/Heart',
     name: 'Heart',
-    component:Heart
+    component:()=>import('../views/Nutrition.vue'),
+    meta:{isSecret:false}
   },
   {                     
     path: '/Nutrition',
     name: 'Nutrition',
-    component:Nutrition
+    component:()=>import('../views/Nutrition.vue'),
+    mets:{isSecret:false}
   },
-  {
-    path: '/contact',
-    name: 'contact' ,
-    component:contact
-  },
+  
   {
     path: '/Hydrate',
     name: 'Hydrate',
-    component:Hydrate
+    component:() =>import('../views/Hydrate.vue'),
+    mets:{isSecret:false}
   },
   {
     path: '/Excercise',
     name: 'Excercise',
-    component:Excercise,
-    meta: {isSecret:true}
+    component:()=>import('../views/Excercise.vue')
+  
   },
   
   {
     path: '/login',
-    name: 'login',
-    component:login
+    name: 'Login',
+    component:()=> import('../views/Login.vue')
     
   },
   {
     path: '/sign',
     name: 'sign',
-    component:sign
+    component:() =>import('../views/sign.vue')
     
   },
   

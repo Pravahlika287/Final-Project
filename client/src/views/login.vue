@@ -41,9 +41,9 @@ export default {
         }
     },
     methods: {
-        login(){
+       async  login(){
             try {
-                Login(this.email, this.password);
+                await Login(this.email, this.password);
                 this.$router.push('/Excercise');
             } catch (error) {
                 this.error = error;
@@ -53,5 +53,3 @@ export default {
 }
 </script>
 
-<style>
-</style>

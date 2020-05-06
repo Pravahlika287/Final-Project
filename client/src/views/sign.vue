@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { Sign } from "../models/Users";
+
 export default {
     data(){
         return {

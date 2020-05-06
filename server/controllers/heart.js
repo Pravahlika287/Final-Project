@@ -18,3 +18,5 @@ res.send({
 
  .post('/add40',(req,res)=>res.send(heart.add40()
  ))
+
+ module.exports = router;

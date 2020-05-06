@@ -27,7 +27,7 @@
 </template>   
 
 <script>
-import Excercises from "../models/Excercises";
+import Excercise from "../models/Excercise";
 export default{
   data:()=>({
     newex: "",

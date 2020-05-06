@@ -7,7 +7,7 @@ function remove(i){
     };
 
 
-function addExercise(newex) {
+function addEx(newex) {
     List.push({workout:newex});
     return true;
 };

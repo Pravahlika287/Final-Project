@@ -1,38 +1,42 @@
+
 <template>
-
-
-
-<section class="hero has-background-white hero is-success is-fullheight">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">A Balanced Diet is Always an important part of Health and Fitness</h1>
-      <h2 class="sub-title">Guys,You can know about the food which doesnt have any cholestrol and food which is good in fibres</h2>
-       <div class="column is-one-third">
-        <div class="">
-          <ul class="panel">
-            <li class="panel-heading">fiber food</li>
-            <li>1.Fruits </li>
-            <li>2.Vegetables</li>
-            <li>3.BEANS</li>
-            <li>4.Breads</li>
-            <li>5.Nuts</li>
+  <section>
+  <h1 class="title">Checkout the Nutrition information here</h1>
+  <h2 class='subtitle">It is important to know and keep track of calories we consume</h2>
+          <div class="column">
+     
+            <div class="">
+             <ul class="panel">
+               <li class="panel-heading">fiber food</li>
+               <li>1.Fruits </li>
+               <li>2.Vegetables</li>
+               <li>3.BEANS</li>
+               <li>4.Breads</li>
+               <li>5.Nuts</li>
             
-          </ul>
+              </ul>
+            </div>
+          </div>
 
-        </div>
-      </div>
-      <div class="column">
-        <div class="">
-          <ul class="panel">
-            <li class="panel-heading">Low Calorie but filling foods</li>
-            <li>1.Oats</li>
-            <li>2.Greek yogurt</li>
-            <li>3.Berries</li>
-            <li>4.Eggs</li>
-            <li>5.Chia Seeds</li>
+
+                        <div class="column">
+                          <div class="">
+                              <ul class="panel">
+                                <li class="panel-heading">Low Calorie but filling foods</li>
+                                <li>1.Oats</li>
+                                <li>2.Greek yogurt</li>
+                                <li>3.Berries</li>
+                                <li>4.Eggs</li>
+                                <li>5.Chia Seeds</li>
             
-          </ul>
-          <h3 class="control">Total calories:{{calories}}</h3>
+                              </ul>
+
+
+                          </div>
+
+                        </div>
+
+    <h3 class="control">Total calories:{{calories}}</h3>
           <label class="button">
                         <input type="submit" name="calorie" value=" 300 " @click="add300()" >
                     </label>
@@ -46,25 +50,42 @@
                         <a class="del" @click="removeF(i)" v-if="isAdmin"></a>
                     </h3>    
 
-        </div>
-      </div>
-      
-       
-      
-        
 
-       
-       
-       
-       
-       
-    </div>
-  </div>
-     
-     
-    
-  </section>
+                 
+
+ 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
 </template>
 <script>
 import Nutrition from '../models/Nutrition'

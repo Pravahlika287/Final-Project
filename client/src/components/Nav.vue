@@ -29,17 +29,12 @@
 
       
       <router-link to="/Heart" class="navbar-item" active-class="is-current">Heart</router-link>
-      <router-link to="/Nutrition" class="navbar-item" active-class="is-current">Nutrition</router-link>
       
-      <div class="navbar-item has-dropdown is-hoverable">
-         <a class="navbar-item " active-class="is-current">Track</a>
-         <div class="navbar-dropdown">
-          <router-link to="/Activity" class="navbar-item">
-            Activity</router-link>
-          
-           <hr class="navbar-divider">
-          <router-link to="/log" class="navbar-item">
-            Log</router-link>
+      <router-link to="/Nutrition" class="navbar-item" active-class="is-current">Nutrition</router-link>
+      <router-link to="/Hydrate" class="navbar-item" active-class="is-current">Hydrate</router-link>
+      <router-link to="/About" class="navbar-item" active-class="is-current">About</router-link> 
+        <router-link to="/contact" class="navbar-item" active-class="is-current">Contact</router-link>
+      
           
          
           
@@ -55,24 +50,13 @@
 
 
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-item">
-          About</a>
-        
-
-        <div class="navbar-dropdown">
-          <router-link to="/contact" class="navbar-item">
-            Contact</router-link>
           
-           <hr class="navbar-divider">
-          <router-link to="/report" class="navbar-item">
-            Report an issue</router-link>
-          
+           
          
           
-        </div>
-      </div>
-    </div>  
+        
+    
+      
     <div class="navbar-end">
       <div class="navbar-items">
   
@@ -82,14 +66,14 @@
           <a class= "button is-primary" href="/signup">
           <strong>Sign up</strong></a>
         
-         <a class="button is-light" href="/login">
+         <a class="button is-primary" href="/login">
          Log in</a>
           
         
       </div>
     </div>
     </div>
-    </div>
+    
   
 
 </nav>
