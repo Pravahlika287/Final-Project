@@ -4,9 +4,9 @@ import Excercise  from '../views/Excercise.vue'
 import Heart from '../views/Heart.vue'
 import Nutrition from '../views/Nutrition.vue'
 import contact from '../views/contact.vue'
-import report from '../views/report.vue'
-import Activity from '../views/Activity.vue'
-import Log from '../views/Log.vue'
+import Hydrate from '../views/Hydrate.vue'
+
+
 import login from '../views/login.vue'
 import sign from '../views/sign.vue'
 
@@ -26,11 +26,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/Excercise',
-    name:  'Excercise',
-    component:Excercise
-  },
+  
   {
     path: '/Heart',
     name: 'Heart',
@@ -47,22 +43,17 @@ const routes = [
     component:contact
   },
   {
-    path: '/report',
-    name: 'report',
-    component:report
+    path: '/Hydrate',
+    name: 'Hydrate',
+    component:Hydrate
   },
   {
-    path: '/Activity',
-    name: 'Activity',
-    component:Activity,
+    path: '/Excercise',
+    name: 'Excercise',
+    component:Excercise,
     meta: {isSecret:true}
   },
-  {
-    path: '/Log',
-    name: 'Log',
-    component:Log
-    
-  },
+  
   {
     path: '/login',
     name: 'login',

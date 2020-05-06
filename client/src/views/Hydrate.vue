@@ -10,7 +10,7 @@
             <h2>aggregate: {{water}} ounces </h2>
                 <div class="manage">
                      <label class="button">
-                        <input type="submit" name="water" value=" 3ounce" @click="add3()" >
+                        <input type="submit" name="water" value=" 3 ounces " @click="add3()" >
                     </label>
                      <label class="button">
                          <input type="submit" name="water" value="6 ounces" @click="add6()" >
