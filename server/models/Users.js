@@ -1,7 +1,7 @@
 const Users = [
-    { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userId: 0 },
-    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userId: 1},
-    { Name: 'Bernie', Password: '2020', Email: 'bernie@newpaltz.edu', userId: 2 },    
+    { Name: 'pravi', Password: '1234', Email:'pravi@newpaltz.edu', userId: 0 },
+    { Name: 'john', Password: '2224', Email: 'john@newpaltz.edu', userId: 1},
+    { Name: 'sai', Password: '8889', Email: 'sai@newpaltz.edu', userId: 2 },    
 ];
 
 

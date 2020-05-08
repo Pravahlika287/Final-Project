@@ -3,7 +3,7 @@ const path = require('path');
 
 const Excontroller= require('./controllers/excercise');
 
-const loginController = require('./controllers/login');
+
 
 const hycontroller=require('./controllers/hydrate');
 const hecontroller = require('./controllers/heart');
@@ -38,7 +38,7 @@ app
     .use('/heart',hecontroller)
     .use('/nutrition',ncontroller)
     .use('/users', usersController)
-    .use('/login', loginController)
+    
 
     
     .use( (err, req, res, next ) => {

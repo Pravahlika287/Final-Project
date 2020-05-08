@@ -42,19 +42,19 @@ const routes = [
   {
     path: '/Excercise',
     name: 'Excercise',
-    component:()=>import('../views/Excercise.vue')
-  
+    component:()=>import('../views/Excercise.vue'),
+    meta:{isSecret:true}
   },
   
   {
     path: '/login',
     name: 'Login',
-    component:()=> import('../views/Login.vue')
+    component:()=> import('../views/Excercise.vue')
     
   },
   {
-    path: '/sign',
-    name: 'sign',
+    path: '/signup',
+    name: 'signup',
     component:() =>import('../views/sign.vue')
     
   },

@@ -36,21 +36,7 @@
 
 
                         </div>
-                        <input class="input" type="text" placeholder="Item" v-model="newfood">
-                        <input class="input" type="text" placeholder="calorieconsum" v-model="cal">
-                        <button type="submit" value="addition" @click="addF()">
-
-
-                    <container class="manage">
-                  <div v-for="x in Nutrition.State.Nutrition" :key="x.food">
-                    <table class="t1">
-                     <td> diet:{{x.name}}</td> <td>calories: {{x.calorie}} </td>
-                     <button class="cancel" @click="remove(i)"></button>
-                    </table>  
-                   </div> 
-                    </container>    
-                       
-
+                        
       </container>
   </section>
 </template>  

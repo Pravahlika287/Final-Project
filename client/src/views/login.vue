@@ -33,18 +33,21 @@
 <script>
 import { Login } from "../models/Users";
 export default {
-    data:()=>({
+    data(){
+        return{
     
-            email: "",
-            password: "",
-            error: "",
+    
+            email: '',
+            password: '',
+            error: ''
+    }
         
-    }),
+    },
     methods: {
        async  login(){
             try {
                 await Login(this.email, this.password);
-                this.$router.push('/Excercise');
+                this.$router.push('/excercise');
             } catch (error) {
                 this.error = error;
             }

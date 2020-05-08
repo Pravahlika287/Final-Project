@@ -4,10 +4,7 @@ const users = require('../models/Users');
 
 const router = express.Router();
 
-router.use(function(req, res, next) {
-    console.log({ userID: req.userID })
-    next();
-});
+
 router
     .post('/login', (req, res) => {
         try {

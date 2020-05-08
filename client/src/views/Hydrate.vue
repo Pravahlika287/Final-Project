@@ -29,11 +29,11 @@
 import Hydrate from '../models/Hydrate'
 export default {
     data: () => ({
-        water: Hydrate.State.Hydrate[0].hydratetotal //index of where you're looking
+        water: Hydrate.State.Hydrate[0].HydrateSum //index of where you're looking
     }),
     methods: {
         add3(){
-            this.water=3
+            this.water+=3
         
        
     },

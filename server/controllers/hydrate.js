@@ -4,12 +4,13 @@ const hydrate= require('../models/Hydrate');
 const router = express.Router();
 
 router
- .get("/",(req,res)=>{
+ .get('/',(req,res)=>{
 res.send({
     Hydrate:hydrate.HydrateSum
 
-});
- })  
+})
+ })
+ 
 
 
  .post('/add3',(req,res)=>res.send(hydrate.add3()
