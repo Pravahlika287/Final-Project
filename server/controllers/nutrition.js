@@ -1,24 +1,19 @@
 const express = require('express');
 
-const nut= require('../models/Nutrition');
+const nutrition= require('../models/Nutrition');
 const router = express.Router();
 
 router
  .get('/',(req,res)=>{
 res.send({
-    Nutrition:nutrition.diettotal
+    Nutrition:nutrition.dietList
 
-});
- })  
+})
+ })
+ 
+ .post('/addF',(req,res)=>res.send(nutrition.addF(req.body.food,req.body.calorie)))
 
-
- .post('/add300',(req,res)=>res.send(nutrition.add300()
- ))
-
-
- .post('/add500',(req,res)=>res.send(nutrition.add500()
- ))
-
-
+.post('/remove',(req,res)=>send(nutrition.remove(req.body.i)))
+ 
 
  module.exports = router;

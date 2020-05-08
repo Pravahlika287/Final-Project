@@ -4,19 +4,21 @@ const Users = [
     { Name: 'Bernie', Password: '2020', Email: 'bernie@newpaltz.edu', userId: 2 },    
 ];
 
-module.exports = {
+
   
 
-    Login(email, password) {
+   function Login(email, password) {
 
         const user = Users.find(x => x.Email == email);
         if(!user) throw Error('User not found');
         if(user.Password != password) throw Error('Wrong Password');
 
         return user;
-    },
+    };
 
-Get(userId) {
+function Get(userId) {
     return Users[userId]
-}
+};
+module.exports={
+    Login,Get,Users
 }

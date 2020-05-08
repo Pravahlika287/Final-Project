@@ -33,7 +33,7 @@
       <router-link to="/Nutrition" class="navbar-item" active-class="is-current">Nutrition</router-link>
       <router-link to="/Hydrate" class="navbar-item" active-class="is-current">Hydrate</router-link>
       <router-link to="/About" class="navbar-item" active-class="is-current">About</router-link> 
-        <router-link to="/contact" class="navbar-item" active-class="is-current">Contact</router-link>
+        
       
           
          

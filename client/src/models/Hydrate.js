@@ -13,15 +13,15 @@ export default {
      })
     },
     async add3() {
-        await myFetch("/hydrate/add1")
+        await myFetch("/hydrate/add3")
 },
     async add6() {
-        await myFetch("/hydrate/add5")
+        await myFetch("/hydrate/add6")
 },
 async add15() {
-    await myFetch("/hydrate/add10")
+    await myFetch("/hydrate/add15")
 },
 async add25() {
-    await myFetch("/hydrate/add20")
+    await myFetch("/hydrate/add25")
 }
 }

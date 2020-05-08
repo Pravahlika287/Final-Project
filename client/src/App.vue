@@ -22,13 +22,7 @@ export default {
 </script>
 
 <style lang="scss"> 
-.navbar {
-  color:darkblue;
-  display:block;
-  background-color: darkorange;;
-}
 
-  
 
 
 

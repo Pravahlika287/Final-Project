@@ -33,13 +33,13 @@
 <script>
 import { Login } from "../models/Users";
 export default {
-    data(){
-        return {
-            email: '',
-            password: '',
-            error: ''
-        }
-    },
+    data:()=>({
+    
+            email: "",
+            password: "",
+            error: "",
+        
+    }),
     methods: {
        async  login(){
             try {

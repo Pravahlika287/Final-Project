@@ -1,12 +1,12 @@
 const express = require('express');
 
-const water= require('../models/Hydrate');
+const hydrate= require('../models/Hydrate');
 const router = express.Router();
 
 router
- .get('/',(req,res)=>{
+ .get("/",(req,res)=>{
 res.send({
-    Hydrate:hydrate.hydrateTotal
+    Hydrate:hydrate.HydrateSum
 
 });
  })  

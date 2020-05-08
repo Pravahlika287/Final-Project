@@ -3,19 +3,20 @@
     <h1 class="title">This is the Workout page</h1>
     <h2 class="subtitle">You can save progress here</h2>
         <div class="c1">
-            <figure class ="image is-64x64">
+        
                 <image src="https://www.pexels.com/photo/person-tying-lace-of-shoes-1040427/"></image>
-                </figure>
+                
                
         </div>
         
     <container>
         <h2 class="control">Hey guys,u can add the daily workout right here</h2>
+        <progress class="progress is-danger" max="100">30%</progress>
         
          
         
                 <input class="input" type="text" placeholder="add excercise" v-model="newex" v-if="isAdmin">
-                    <input class="button" type="submit" value="Add another item" @click="addEx(newex)">
+                    <input class="button" type="submit" value="Add another item" @click="addEx()">
 
                      <div class="manage" v-for="y in workouts" :key="y.workout">
                     <h3>{{y.workout}}
@@ -32,21 +33,22 @@ export default{
   data:()=>({
     newex: "",
     workout: workouts.State.workouts,
-    isAdmin: true
+    isAdmin :"true"
+    
   }),
   methods: {
     
     async remove(i){
         try {
-            await workouts.State.workouts.remove(i)
+            await Excercise.remove(i)
         } catch (error) {
             this.error = error
         }
         }
     },
-    async addEx(newex){
+    async addEx(){
         try {
-            await workouts.State.workouts.addEx(newex)
+            await Excercise.addEx(this.newex)
         } catch (error) {
             this.error = error;
         }

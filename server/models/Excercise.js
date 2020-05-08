@@ -9,7 +9,7 @@ function remove(i){
 
 function addEx(newex) {
     List.push({workout:newex});
-    return true;
+    return List;
 };
 
 

@@ -11,7 +11,7 @@ const ncontroller = require('./controllers/nutrition');
 const usersController = require('./controllers/users');
 
 const app = express();
-const port = 3000;
+const port = 4000;
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -30,8 +30,8 @@ app.use(function(req, res, next) {
 app
 .use(express.json())
 .use(express.urlencoded({ extended: true }))
-
-    .get('/', (req, res) => res.send('Stay fit everyone') )
+.use(express.static( __dirname + '/../client/dist'))
+    
     
     .use('/excercise',Excontroller) 
     .use('/hydrate', hycontroller)
@@ -40,12 +40,7 @@ app
     .use('/users', usersController)
     .use('/login', loginController)
 
-    .use((req, res) => {
-        const homePath = path.join( __dirname , '/../client/dist/index.html');
-        console.log(homePath);
-        res.sendFile(homePath)
-
-    })
+    
     .use( (err, req, res, next ) => {
         console.error(err);
         const errorCode = err.code || 500;

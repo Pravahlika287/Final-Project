@@ -1,13 +1,14 @@
 
 <template>
-  <section>
-  <h1 class="title">Checkout the Nutrition information here</h1>
-  <h2 class='subtitle">It is important to know and keep track of calories we consume</h2>
-          <div class="column">
+  <section class="hero has-background-primary hero is-success is-fullheight">
+      <container class="manage">
+        <h1 class="title  has-text-black has-text-weight-bold is-large has-text-centered">Balanced Diet is Always Necessary for Good health</h1>
+        <h1 class="sub-title has-text-black has-text-weight-bold has-text-centered ">It is Necessary to keep track of calories for the food we consume</h1>
+         <div class="column is-one-third has-text-black">
      
             <div class="">
              <ul class="panel">
-               <li class="panel-heading">fiber food</li>
+               <li class="panel-heading has-background-warning">Fiber food</li>
                <li>1.Fruits </li>
                <li>2.Vegetables</li>
                <li>3.BEANS</li>
@@ -16,13 +17,12 @@
             
               </ul>
             </div>
-          </div>
+            </div> 
 
-
-                        <div class="column">
+             <div class="column is-one-third has-text-black">
                           <div class="">
                               <ul class="panel">
-                                <li class="panel-heading">Low Calorie but filling foods</li>
+                                <li class="panel-heading has-background-warning">Low Calorie but filling foods</li>
                                 <li>1.Oats</li>
                                 <li>2.Greek yogurt</li>
                                 <li>3.Berries</li>
@@ -34,59 +34,26 @@
 
                           </div>
 
+
                         </div>
-
-    <h3 class="control">Total calories:{{calories}}</h3>
-          <label class="button">
-                        <input type="submit" name="calorie" value=" 300 " @click="add300()" >
-                    </label>
-                     <label class="button">
-                         <input type="submit" name="calorie" value=" 500" @click="add500()" >
-                     </label>
-          <input class="input" type="text" placeholder="add food" v-model="newfood" v-if="isAdmin">
-                    <input class="button" type="submit" value="Add another food" @click="addF(newfood,calorie)">
-                    <div class="manage" v-for="y in diets" :key="y.diet">
-                    <h3>{{y.diet}}
-                        <a class="del" @click="removeF(i)" v-if="isAdmin"></a>
-                    </h3>    
+                        <input class="input" type="text" placeholder="Item" v-model="newfood">
+                        <input class="input" type="text" placeholder="calorieconsum" v-model="cal">
+                        <button type="submit" value="addition" @click="addF()">
 
 
-                 
+                    <container class="manage">
+                  <div v-for="x in Nutrition.State.Nutrition" :key="x.food">
+                    <table class="t1">
+                     <td> diet:{{x.name}}</td> <td>calories: {{x.calorie}} </td>
+                     <button class="cancel" @click="remove(i)"></button>
+                    </table>  
+                   </div> 
+                    </container>    
+                       
 
- 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </container>
   </section>
-</template>
+</template>  
 <script>
 import Nutrition from '../models/Nutrition'
 export default {
@@ -94,33 +61,35 @@ export default {
   data:()=>
   ({
     newfood: "",
+    cal:0,
     diet:diets.State.diets,
     calories:Nutrition.State.Nutrition[0].diettotal ,
     
-    isAdmin: true
+
+    
   }),
   methods: {
     async remove(i){
         try {
-            await diets.State.diets.remove(i)
+            await Nutrition.remove(i)
         } catch (error) {
             this.error = error;
         }
     },
     
 
-    async addF(newfood,calorie){
+    async addF(){
         try {
-            await diets.State.diets.addF(newfood)
+            await Nutrition.addF(this.newfood,this.cal)
         } catch (error) {
             this.error = error;
         }
-    },
+    }},
     
     created(){
         Nutrition.Init()
     }
   }
-}
 
-</script>
+
+</script>    

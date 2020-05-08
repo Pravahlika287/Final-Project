@@ -23,21 +23,21 @@ const routes = [
   {
     path: '/Heart',
     name: 'Heart',
-    component:()=>import('../views/Nutrition.vue'),
+    component:()=>import('../views/Heart.vue'),
     meta:{isSecret:false}
   },
   {                     
     path: '/Nutrition',
     name: 'Nutrition',
     component:()=>import('../views/Nutrition.vue'),
-    mets:{isSecret:false}
+    meta:{isSecret:false}
   },
   
   {
     path: '/Hydrate',
     name: 'Hydrate',
     component:() =>import('../views/Hydrate.vue'),
-    mets:{isSecret:false}
+    meta:{isSecret:false}
   },
   {
     path: '/Excercise',

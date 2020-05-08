@@ -1,5 +1,5 @@
 <template>
-  <form class="container" @submit.prevent="sign">
+  <form class="container">
       {{error}}
       <div class="field">
         <p class="control has-icons-left has-icons-right">
@@ -25,6 +25,9 @@
             <button class="button is-success">
             Sign Up
             </button>
+            <button class="button is-success" @click="cancel">Dont submit</button>
+
+
         </p>
         </div>
   </form>
@@ -33,24 +36,23 @@
 <script>
 
 export default {
-    data(){
-        return {
-            email: '',
-            password: '',
-            error: ''
-        }
-    },
+    data:()=>({
+        
+            email: "",
+            password: "",
+            
+        
+    }),
     methods: {
-        sign(){
-            try {
-                sign(this.email, this.password);
-                this.$router.push('/Excercise');
-            } catch (error) {
-                this.error = error;
-            }
+        cancel()
+        {
+            this.email="";
+            this.password="";
+        }
+           
         }
     }
-}
+
 </script>
 
 <style>

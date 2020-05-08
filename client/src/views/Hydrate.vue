@@ -1,13 +1,13 @@
 <template>
     <section>
-        <h1 class="heading">Stay Hydrated Always</h1>
+        <h1 class="title has-text-centered has-text-weight-bold is-large">Stay Hydrated Always</h1>
 
-        <h2 class="subtitle">Tracking the water intake </h2>
+        <h2 class="subtitle has-text-success has-text-centered">Tracking the water intake </h2>
         <figure class="image is-128x128">
-           <img src="https://www.dreamstime.com/thirsty-athlete-drinking-power-drink-long-run-train-image159381749">
+           <img src="http://www.newdesignfile.com/postpic/2013/07/water-tracker-app-iphone_296020.jpg" width="250" height ="230">
         </figure>   
-        <progress class="progress is-large" :value="water" max="75"></progress>
-            <h2>aggregate: {{water}} ounces </h2>
+        <progress class="progress is-medium is-success" :value="water" max="75"></progress>
+            <h2 class="control has-text-weight-bold">Aggregate: {{water}} ounces </h2>
                 <div class="manage">
                      <label class="button">
                         <input type="submit" name="water" value=" 3 ounces " @click="add3()" >
@@ -32,23 +32,26 @@ export default {
         water: Hydrate.State.Hydrate[0].hydratetotal //index of where you're looking
     }),
     methods: {
-        async work1(){
-        try {
-            await Goals.State.Goals.Goals.work1(goal)
-        } catch (error) {
-            this.error = error;
-        }
+        add3(){
+            this.water=3
+        
+       
     },
-    async nowork(i){
-        try {
-            await Goals.State.Goals.Goals.nowork(i)
-        } catch (error) {
-            this.error = error
-        }
+    add6(){
+        this.water+=6
+    
     },
+     add15(){
+        this.water+=15
+    },
+    
+        add25() {
+            this.water+=25
+            
     },
     created(){
         Hydrate.Init()
     }
+}
 }
 </script>

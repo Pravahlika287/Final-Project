@@ -12,12 +12,12 @@ export default {
                                   console.log(x);
      })
     },
-    async addF(newfood) {
-        await myFetch("/nutrition/addF")
+    async addF(food,calorie) {
+        await myFetch("/nutrition/addF",{food,calorie})
 },
     
 async remove(i) {
-    await myFetch("/nutrition/remove")         
+    await myFetch("/nutrition/remove",{i})         
 },
 
 }
