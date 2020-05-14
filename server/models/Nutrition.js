@@ -2,6 +2,10 @@ const dietList = [
     {food:"avocado" , calorie:120}
 ];
 
+const List=[
+    Cholestrol,copper,iodine,iron,fat,fibers,vitamins,minerals
+]
+
 
 
 
@@ -17,7 +21,7 @@ function remove(i){
 
 
 module.exports = {
-    dietList,remove,addF
+    dietList,remove,addF,List
     
     
 }

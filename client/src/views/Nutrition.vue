@@ -5,6 +5,23 @@
         <h1 class="title  has-text-black has-text-weight-bold is-large has-text-centered">Balanced Diet is Always Necessary for Good health</h1>
         <h1 class="sub-title has-text-black has-text-weight-bold has-text-centered ">It is Necessary to keep track of calories for the food we consume</h1>
          <div class="column is-one-third has-text-black">
+
+
+
+
+            <p class="content"><b>The List of Food Items:</b> {{ selected }}</p>
+        <b-field label="Find a JS framework">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="List"
+                placeholder="e.g. jQuery"
+                icon="magnify"
+                clearable
+                @select="option => selected = option">
+                <template slot="empty">No results found</template>
+            </b-autocomplete>
+        </b-field>
      
             <div class="">
              <ul class="panel">
@@ -50,10 +67,12 @@ export default {
     cal:0,
     diet:diets.State.diets,
     calories:Nutrition.State.Nutrition[0].diettotal ,
+    selected:Nutrition.State.List
     
 
     
   }),
+   
   methods: {
     async remove(i){
         try {
@@ -71,6 +90,7 @@ export default {
             this.error = error;
         }
     }},
+    
     
     created(){
         Nutrition.Init()
