@@ -12,6 +12,11 @@ export default {
                                   console.log(x);
      })
     },
+
+    async FilteredArray()
+    {
+       await myFetch("/FilteredArray",$List) 
+    },
     async addF(food,calorie) {
         await myFetch("/nutrition/addF",{food,calorie})
 },
