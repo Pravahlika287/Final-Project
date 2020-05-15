@@ -6,15 +6,12 @@
         <h1 class="sub-title has-text-black has-text-weight-bold has-text-centered ">It is Necessary to keep track of calories for the food we consume</h1>
          <div class="column is-one-third has-text-black">
 
-
-
-
-            <p class="content"><b>The List of Food Items:</b> {{ selected }}</p>
+<p class="content"><b>The List of Food Items:</b> {{ selected }}</p>
         <b-field label="Find a JS framework">
             <b-autocomplete
                 rounded
                 v-model="name"
-                :data="List"
+                :data="FilteredArray"
                 placeholder="e.g. jQuery"
                 icon="magnify"
                 clearable
@@ -22,8 +19,17 @@
                 <template slot="empty">No results found</template>
             </b-autocomplete>
         </b-field>
+        
+
+
+            
      
-            <div class="">
+            
+
+             <div class="column is-one-third has-text-black">
+
+
+               <div class="">
              <ul class="panel">
                <li class="panel-heading has-background-warning">Fiber food</li>
                <li>1.Fruits </li>
@@ -35,8 +41,6 @@
               </ul>
             </div>
             </div> 
-
-             <div class="column is-one-third has-text-black">
                           <div class="">
                               <ul class="panel">
                                 <li class="panel-heading has-background-warning">Low Calorie but filling foods</li>
@@ -53,7 +57,7 @@
 
 
                         </div>
-                        
+                
       </container>
   </section>
 </template>  
@@ -67,7 +71,10 @@ export default {
     cal:0,
     diet:diets.State.diets,
     calories:Nutrition.State.Nutrition[0].diettotal ,
-    selected:Nutrition.State.List
+    selected:"null",
+    name:FilteredArray,
+    List
+
     
 
     

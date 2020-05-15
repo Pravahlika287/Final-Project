@@ -10,8 +10,7 @@ res.send({
 
 })
  .get('/',(req,res)=>{
-     res.send({
-         Nutrition:nutrition.$List
+     res.send(nutrition.FilteredArray($List));
      })
  })
 
@@ -19,5 +18,5 @@ res.send({
 
 .post('/remove',(req,res)=>send(nutrition.remove(req.body.i)))
  
- });
+ 
  module.exports = router;
