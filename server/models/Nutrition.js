@@ -7,17 +7,11 @@ const List=[
 ]
 
 
-function FilteredArray() {
-this.data.filter((option) => {
-    return option
-        .toString()
-        .toLowerCase()
-        .indexOf(this.name.toLowerCase()) >= 0
-},
+
 function addF(food,calorie) {
     dietList.push({food:food,calorie:calorie});
     return dietList;
-})
+}
 function remove(i){
     this.dietList.splice(i,1);
     return true;
@@ -26,8 +20,7 @@ function remove(i){
 
 
 module.exports = {
-    dietList,remove,addF,List,FilteredArray
+    dietList,remove,addF,List
     
     
-}
 }
