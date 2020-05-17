@@ -9,10 +9,9 @@ res.send({
     Nutrition:nutrition.dietList
 
 })
- .get('/',(req,res)=>{
-     res.send(nutrition.FilteredArray($List));
-     })
- })
+})
+
+
 
  .post('/addF',(req,res)=>res.send(nutrition.addF(req.body.food,req.body.calorie)))
 

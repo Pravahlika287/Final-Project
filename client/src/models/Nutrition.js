@@ -13,10 +13,7 @@ export default {
      })
     },
 
-    async FilteredArray()
-    {
-       await myFetch("/FilteredArray",$List) 
-    },
+   //updated
     async addF(food,calorie) {
         await myFetch("/nutrition/addF",{food,calorie})
 },

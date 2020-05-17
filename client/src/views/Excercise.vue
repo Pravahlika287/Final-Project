@@ -33,7 +33,8 @@ export default{
   data:()=>({
     newex: "",
     workout: workouts.State.workouts,
-    isAdmin :"true"
+    isAdmin :"true",//defined i
+    i:""
     
   }),
   methods: {
